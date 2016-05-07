@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WakeOnLan</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="menu_favorites">Favorites</string>
+    <string name="menu_networkScan">Scan for devices</string>
+    <string name="menu_wakeUp">Manually Wake Up </string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_about">About</string>
+    <string name="menu_help">Help</string>
+
+
+    <string name="wake_up">Wake Up!</string>
+    <string name="mac">MAC address </string>
+    <string name="broadcast">Broadcast </string>
+    <string name="btn_scan">Start Network Scan</string>
+
+    <string name="addToFavorites">Add to Favorites…</string>
+    <string name="add">Add</string>
+    <string name="delete">Delete</string>
+    <string name="favsClearAll">Clear All</string>
+
+    <string name="context_fav_del">Delete</string>
+    <string name="alert_Fav">Favorite name</string>
+
+    <string name="wakeupInfo">If you don\'t know the MAC or Broadcast address of your computer, just use the Network Scan to find online devices in your environment.</string>
+    <string name="helpMessage">If your Computer doesn\'t start, make sure that you have enabled Wake-on-Lan in your computer configuration.</string>
+    <string name="failMacDiscover">Failed to discover MAC address</string>
+    <string name="error">Error</string>
+    <string name="wifiNotConnectedMessage">Please connect to a wifi network to search for computers.</string>
+
+    <string name="invalidBroadcast">Please use a valid broadcast address. (e.g. 192.168.0.255)</string>
+    <string name="invalidMac">Please use a valid MAC address. (e.g. F5:D4:56:12:79:47)</string>
+
+    <string name="computerShouldStart">The computer should start!</string>
+    <string name="wolFailed">Failed to send Wake-on-Lan package.</string>
+
+    <string name="dataSaved">Data saved</string>
+    <string name="cancelButton">Cancel</string>
+
+    <string name="chooseAction">Choose an action…</string>
+    <string name="networkScanProgressDialogTitle">Scanning for devices</string>
+    <string name="chooseFavoriteName">Choose a favorite name…</string>
+    <string name="favoriteName">Favorite name</string>
+    <string name="emptyFavoriteName">Please enter a favorite name</string>
+    <string name="favoriteNameAlreadyExists">The chosen favorite name is already used</string>
+
+    <string name="prefs_port_key" translatable="false">prefs_key_port_key</string>
+    <string name="prefs_port_title">WakeOnLan Port</string>
+    <string name="prefs_port_dialog_title">Select preferred WakeOnLan Port</string>
+
+    <string name="prefs_advanced_scan_enabled_key" translatable="false">prefs_advanced_scan_enabled_key</string>
+    <string name="prefs_advanced_scan_enabled_title">Advanced Scan Options</string>
+    <string name="prefs_advanced_scan_enabled_summary">Allows you to define a start and end IP for the network scan manually.</string>
+    <string name="prefs_advanced_scan_cird_key" translatable="false">prefs_advanced_scan_cird_key</string>
+    <string name="prefs_advanced_scan_cird_summary">To increase or decrease the scan range</string>
+    <string name="prefs_advanced_scan_cird_title">CIRD Netmask</string>
+
+    <string name="information">Information</string>
+    <string name="clearFavoritesMessage">Do you really want to delete all favorites?</string>
+    <string name="openSourceLicences">Open Source Licences</string>
+    <string name="about"><u><b>WakeOnLan</b></u>\n\n
+        Acknowledgements:\n
+        • Router icon from <a href="https://openclipart.org/detail/1918/router">OpenClipart</a>\n
+        • PC icon from <a href="http://www.fancyicons.com/free-icon/120/hydro-pro-icon-set/free-mycomputer-icon-png">FancyIcons</a>\n
+        • Android icon from <a href="http://www.icon2s.com/4595/ecommerce-and-business-icons/android-mobile-tablet-smart-phone-icon">Icon2s</a>\n
+        • iPhone icon from <a href="http://www.icon2s.com/4595/ecommerce-and-business-icons/iphone-tablet-mobile-icon">Icon2s</a></string>
+    <string name="aboutCopyright" translatable="false">© C. Eickemeyer, 2016</string>
+    <string name="prefs_analytics_key" translatable="false">prefs_key_analytics_key</string>
+    <string name="prefs_analytics_summary">Allow the app to send diagnose data to Google Analytics.</string>
+    <string name="prefs_analytics_title">Google Analytics</string>
+
+
+</resources>

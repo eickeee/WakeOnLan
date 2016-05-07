@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="prefs_port_entry_values" translatable="false">
+        <item>7</item>
+        <item>9</item>
+    </string-array>
+
+    <string-array name="prefs_port_entries" translatable="false">
+        <item>Port 7</item>
+        <item>Port 9</item>
+    </string-array>
+</resources>
+

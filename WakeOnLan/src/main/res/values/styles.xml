@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <style name="AppTheme" parent="Theme.AppTheme"></style>
+
+    <style name="Theme.AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/myPrimaryColor</item>
+        <item name="colorPrimaryDark">@color/myPrimaryDarkColor</item>
+        <item name="colorAccent">@color/myAccentColor</item>
+        <item name="android:windowBackground">@color/myWindowBackground</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <item name="android:textColorLink">@color/myAccentColor</item>
+    </style>
+
+    <style name="MyPreferenceTheme" parent="@style/PreferenceThemeOverlay">
+        <item name="colorAccent">@color/myPrimaryColor</item>
+        <item name="android:textColorPrimary">#000000</item>
+    </style>
+
+    <style name="ToolbarStyle" parent="">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+
+    <style name="TextAppearance.FloatLabel" parent="android:TextAppearance.Small">
+        <item name="android:textColor">@color/myAccentColor</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--<style name="menu_labels_style">-->
+    <!--<item name="android:background">@drawable/fab_label_background</item>-->
+    <!--<item name="android:textColor">@android:color/white</item>-->
+    <!--</style>-->
+
+    <style name="HdrDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/myPrimaryColor</item>
+        <item name="android:textColorPrimary">#000000</item>
+    </style>
+</resources>

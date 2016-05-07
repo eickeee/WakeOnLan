@@ -1,0 +1,25 @@
+<resources>
+    <color name="myPrimaryColor">#3f51b5</color>
+    <color name="myPrimaryDarkColor">#303f9f</color>
+    <color name="myAccentColor">#3F51B5</color>
+    <color name="myDrawerBackground">#F2F2F2</color>
+    <color name="myWindowBackground">#DEDEDE</color>
+    <color name="myNavigationColor">#000000</color>
+
+    <color name="lockedDrawerStatusBar">#293587</color>
+
+    <color name="myTextPrimaryColor">#464646</color>
+    <color name="selected_gray">#ffdbdbdb</color>
+
+
+    <color name="buttonColorNormal">#ed1010</color>
+    <color name="buttonColorPressed">#fab4b4</color>
+
+    <color name="button2ColorNormal">#ff4d5be1</color>
+    <color name="button2ColorPressed">#ff868bff</color>
+
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="half_black">#808080</color>
+    <color name="white">#fafafa</color>
+    <color name="white_pressed">#57f1f1f1</color>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="all">
+
+        <item
+            android:id="@+id/nav_wakeUp"
+            android:icon="@drawable/ic_wake_24dp"
+            android:title="@string/menu_wakeUp" />
+        <item
+            android:id="@+id/nav_scan"
+            android:icon="@drawable/ic_scan_24dp"
+            android:title="@string/menu_networkScan" />
+        <item
+            android:id="@+id/nav_favorites"
+            android:icon="@drawable/ic_favs_24dp"
+            android:title="@string/menu_favorites" />
+
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="all">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_24px"
+            android:title="@string/menu_settings" />
+        <!--<item-->
+        <!--android:id="@+id/nav_help"-->
+        <!--android:icon="@drawable/ic_help_24px"-->
+        <!--android:title="@string/menu_help" />-->
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_about_24dp"
+            android:title="@string/menu_about" />
+    </group>
+</menu>

@@ -1,0 +1,18 @@
+<android.support.design.widget.FloatingActionButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fabAdd"
+    android:layout_width="@dimen/fab_size_normal"
+    android:layout_height="@dimen/fab_size_normal"
+    android:layout_gravity="end|bottom"
+    android:layout_margin="@dimen/fab_margin"
+    android:src="@drawable/fab_add"
+    android:visibility="gone"
+    app:backgroundTint="@color/button2ColorNormal"
+    app:borderWidth="0dp"
+    app:fab_size="normal"
+    app:layout_behavior="de.eickemeyer.wake.on.lan.ui.ScrollAwareFABBehavior"
+    app:rippleColor="@color/button2ColorPressed"
+    tools:visibility="visible" />
+
+

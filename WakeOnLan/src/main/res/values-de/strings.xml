@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WakeOnLan</string>
+    <string name="menu_settings">Einstellungen</string>
+    <string name="wake_up">Aufwecken!</string>
+    <string name="mac">MAC-Adresse</string>
+
+    <string name="btn_scan">Starte Gerätesuche</string>
+
+    <string name="addToFavorites">Favoriten hinzufügen…</string>
+    <string name="add">Hinzufügen</string>
+    <string name="favsClearAll">Alle löschen</string>
+
+    <string name="context_fav_del">Gerät löschen</string>
+    <string name="alert_Fav">Favoritenname</string>
+    <string name="menu_favorites">Favoriten</string>
+    <string name="menu_networkScan">Gerätesuche</string>
+    <string name="wakeupInfo">Falls Sie die MAC- oder Broadcast-Adresse ihres Computers nicht wissen, nutzen Sie die Gerätesuche, um Geräte in Ihrer Umgebung zu finden.</string>
+    <string name="failMacDiscover">Fehler beim herausfinden der MAC-Adresse</string>
+    <string name="error">Fehler</string>
+    <string name="wifiNotConnectedMessage">Bitte verbinden Sie sich zum Wlan, um nach Computern zu suchen.</string>
+    <string name="invalidBroadcast">Bitte verwenden Sie eine gültige Broadcast-Adresse. (z. B. 192.168.0.255)</string>
+    <string name="invalidMac">Bitte verwenden Sie eine gültige MAC-Adresse. (z. B. F5:D4:56:12:79:47)</string>
+    <string name="computerShouldStart">Der Computer sollte starten!</string>
+    <string name="wolFailed">Fehler beim senden des Wake-on-Lan-Pakets.</string>
+    <string name="dataSaved">Daten gespeichert</string>
+    <string name="cancelButton">Abbrechen</string>
+
+    <string name="menu_help">Hilfe</string>
+    <string name="favoriteName">Favoritenname</string>
+
+    <string name="menu_wakeUp">Manuelles Aufwecken</string>
+    <string name="networkScanProgressDialogTitle">Suche nach Geräten</string>
+    <string name="helpMessage">Falls Ihr Computer nicht starten sollte, vergewissern Sie sich, dass Wake-On-Lan in den Computer-Einstellungen aktiviert ist.</string>
+    <string name="chooseAction">Wähle eine Aktion…</string>
+    <string name="chooseFavoriteName">Wähle einen Favoritennamen…</string>
+    <string name="delete">Löschen</string>
+    <string name="emptyFavoriteName">Bitte geben Sie einen Favoritenname ein</string>
+    <string name="favoriteNameAlreadyExists">Der gewählte Name ist bereits vergeben</string>
+    <string name="menu_about">About</string>
+    <string name="prefs_analytics_title">Google Analytics</string>
+    <string name="prefs_port_title">WakeOnLan Port</string>
+    <string name="information">Information</string>
+    <string name="clearFavoritesMessage">Möchten sie wirklich alle Favoriten löschen?</string>
+    <string name="prefs_analytics_summary">Erlaube der Anwendung Diagnosedaten an Google Analytics zu senden.</string>
+    <string name="openSourceLicences">Open-Source-Lizenzen</string>
+
+      <string name="about"><u><b>WakeOnLan</b></u>\n\n
+        Danksagungen:\n
+        • Router-Icon von <a href="https://openclipart.org/detail/1918/router">OpenClipart</a>\n
+        • PC-Icon von <a href="http://www.fancyicons.com/free-icon/120/hydro-pro-icon-set/free-mycomputer-icon-png">FancyIcons</a>\n
+        • Android-Icon von <a href="http://www.icon2s.com/4595/ecommerce-and-business-icons/android-mobile-tablet-smart-phone-icon">Icon2s</a>\n
+        • iPhone-Icon von <a href="http://www.icon2s.com/4595/ecommerce-and-business-icons/iphone-tablet-mobile-icon">Icon2s</a></string>
+    <string name="prefs_port_dialog_title">Wähle bevorzugten WakeOnLan-Port</string>
+    <string name="prefs_advanced_scan_enabled_title">Erweiterte Scan-Einstellungen</string>
+    <string name="prefs_advanced_scan_enabled_summary">Erlaubt ihnen die Start- und End-IP-Adresse manuell zu wählen</string>
+    <string name="prefs_advanced_scan_cird_summary">Um den Scan-Bereich zu verkleinern bzw. vergrößern</string>
+    <string name="prefs_advanced_scan_cird_title">CIRD Subnetzmaske</string>
+    <string name="broadcast">Broadcast</string>
+    <string name="navigation_drawer_close">Schließe Navigation Drawer</string>
+    <string name="navigation_drawer_open">Öffne Navigation Drawer</string>
+
+</resources>

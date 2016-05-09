@@ -11,6 +11,7 @@ Features:
 * Manually wake devices
 * Supports different layouts for different devices to improve usability (see Screenshot folder)
 * Material Design with modern elements
+* Data Binding 
 * No memory leaks (LeakCanary tested) except of a known  
 
 TODOs:

@@ -9,7 +9,7 @@ Features:
 * Scanning for online network devices
 * Save devices in a favorite list
 * Manually wake devices
-* New: Choose your preferred wol port and CIRD
+* New: Choose your preferred Wake-on-Lan port and the CIRD to adapt the subnet scan size
 * Supports different layouts for different devices to improve usability (see Screenshot folder)
 * Material Design with modern elements
 * Data Binding 

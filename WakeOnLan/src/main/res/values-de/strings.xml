@@ -54,10 +54,11 @@
     <string name="prefs_port_dialog_title">Wähle bevorzugten WakeOnLan-Port</string>
     <string name="prefs_advanced_scan_enabled_title">Erweiterte Scan-Einstellungen</string>
     <string name="prefs_advanced_scan_enabled_summary">Erlaubt ihnen die Start- und End-IP-Adresse manuell zu wählen</string>
-    <string name="prefs_advanced_scan_cird_summary">Um den Scan-Bereich zu verkleinern bzw. vergrößern</string>
+    <string name="prefs_advanced_scan_cird_summary">Um die Größe des Scan-Bereichs zu verändern</string>
     <string name="prefs_advanced_scan_cird_title">CIRD Subnetzmaske</string>
     <string name="broadcast">Broadcast</string>
     <string name="navigation_drawer_close">Schließe Navigation Drawer</string>
     <string name="navigation_drawer_open">Öffne Navigation Drawer</string>
+    <string name="prefs_advanced_scan_cird_dialog_title">Wähle eine CIRD\n(Standardwert 24)</string>
 
 </resources>

@@ -1,7 +1,10 @@
 package de.eickemeyer.wake.on.lan.fragments;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -16,6 +19,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import de.eickemeyer.wake.on.lan.R;
+import de.eickemeyer.wake.on.lan.WakeOnLanApp;
 import de.eickemeyer.wake.on.lan.activities.MainActivity;
 import de.eickemeyer.wake.on.lan.entities.ScanResult;
 import de.eickemeyer.wake.on.lan.network.IPv4Address;
@@ -91,10 +95,14 @@ public class RetainedScanTaskFragment extends Fragment {
 
     final Thread mScanThread = new Thread() {
 
-        private static final int cird = 24;
+        private int cird;
 
         @Override
         public void run() {
+            final Context context = WakeOnLanApp.getWakeOnLanApp();
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+            cird = prefs.getInt(context.getResources().getString(R.string.prefs_advanced_scan_cird_key), 24);
+
             mScanResults = new ArrayList<>();
             int processors = Runtime.getRuntime().availableProcessors();
             ExecutorService executorService = Executors.newFixedThreadPool(processors != 0 ? processors * 10 : 15);
@@ -133,6 +141,8 @@ public class RetainedScanTaskFragment extends Fragment {
 
             String rangeStartIp = NetworkInformation.getLowestNetAddress(cird);
             String rangeEndIp = NetworkInformation.getHighestNetAddress(cird);
+
+            Log.d(MainActivity.TAG, String.format("setScanConfig: IP:%s, ScanRange:%s - %s, CIRD:%d", mOwnIP, rangeStartIp, rangeEndIp, cird));
 
             //get all ips which need to be scanned
             mIpsToScan = new ArrayList<>();

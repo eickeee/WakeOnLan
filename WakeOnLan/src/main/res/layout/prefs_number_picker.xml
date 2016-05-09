@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/numPickerLayout"
+    android:layout_width='wrap_content'
+    android:layout_height='wrap_content'
+    android:orientation='vertical'
+    android:padding='@dimen/activity_horizontal_margin'>
+
+    <TextView
+        android:id='@android:id/message'
+        android:layout_width='fill_parent'
+        android:layout_height='wrap_content'
+        android:layout_marginBottom='10dp'
+        android:textAppearance='?android:attr/textAppearanceMedium' />
+
+    <NumberPicker
+        android:id="@+id/numPickerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants" />
+</LinearLayout>

@@ -8,7 +8,7 @@ android {
     buildToolsVersion "24.0.0 rc3"
     dexOptions {
         maxProcessCount 2
-        javaMaxHeapSize "2g"
+        javaMaxHeapSize "4g"
     }
     defaultConfig {
         minSdkVersion 11

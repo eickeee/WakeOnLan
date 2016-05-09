@@ -1,4 +1,5 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory android:title="Scan Options">
         <ListPreference
             android:defaultValue="9"
@@ -7,6 +8,16 @@
             android:entryValues="@array/prefs_port_entry_values"
             android:key="@string/prefs_port_key"
             android:title="@string/prefs_port_title" />
+
+        <de.eickemeyer.wake.on.lan.ui.NumberPickerPreference
+            android:defaultValue="24"
+            android:dialogTitle="@string/prefs_advanced_scan_cird_dialog_title"
+            android:key="@string/prefs_advanced_scan_cird_key"
+            android:summary="@string/prefs_advanced_scan_cird_summary"
+            android:title="@string/prefs_advanced_scan_cird_title"
+            app:endValue="32"
+            app:startValue="16" />
+
     </PreferenceCategory>
 </PreferenceScreen>
 

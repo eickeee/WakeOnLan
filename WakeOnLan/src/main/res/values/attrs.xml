@@ -33,4 +33,10 @@
             <enum name="right" value="3" />
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="NumberPickerPreference">
+        <attr name="startValue" format="integer" />
+        <attr name="endValue" format="integer" />
+    </declare-styleable>
+
 </resources>

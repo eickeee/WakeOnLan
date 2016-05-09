@@ -56,8 +56,10 @@
     <string name="prefs_advanced_scan_enabled_title">Advanced Scan Options</string>
     <string name="prefs_advanced_scan_enabled_summary">Allows you to define a start and end IP for the network scan manually.</string>
     <string name="prefs_advanced_scan_cird_key" translatable="false">prefs_advanced_scan_cird_key</string>
-    <string name="prefs_advanced_scan_cird_summary">To increase or decrease the scan range</string>
+    <string name="prefs_advanced_scan_cird_summary">To change the size of the scan range</string>
     <string name="prefs_advanced_scan_cird_title">CIRD Netmask</string>
+    <string name="prefs_advanced_scan_cird_dialog_title">Please select a CIRD\n(default is 24)</string>
+
 
     <string name="information">Information</string>
     <string name="clearFavoritesMessage">Do you really want to delete all favorites?</string>

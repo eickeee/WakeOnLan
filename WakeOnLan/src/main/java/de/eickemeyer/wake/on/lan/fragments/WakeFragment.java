@@ -45,7 +45,7 @@ public class WakeFragment extends BaseFragment {
         } else if (NetworkAddressValidator.isInvalidMac(mac)) {
             Snackbar.make(fragmentContainer, R.string.invalidMac, Snackbar.LENGTH_LONG).show();
         } else if (!NetworkConnectivity.isConnectedToWifi()) {
-            Snackbar.make(fragmentContainer, R.string.wifiNotConnectedMessage, Snackbar.LENGTH_LONG).show();
+            Snackbar.make(fragmentContainer, R.string.wifiNotConnectedMessageWake, Snackbar.LENGTH_LONG).show();
         } else {
             WakeOnLanPackageSender.sendWakeOnLanPackage(activity, mac, broadcast);
         }

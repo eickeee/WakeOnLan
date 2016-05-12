@@ -18,7 +18,7 @@
     <string name="wakeupInfo">Falls Sie die MAC- oder Broadcast-Adresse ihres Computers nicht wissen, nutzen Sie die Gerätesuche, um Geräte in Ihrer Umgebung zu finden.</string>
     <string name="failMacDiscover">Fehler beim herausfinden der MAC-Adresse</string>
     <string name="error">Fehler</string>
-    <string name="wifiNotConnectedMessage">Bitte verbinden Sie sich zum Wlan, um nach Computern zu suchen.</string>
+    <string name="wifiNotConnectedMessageSearch">Bitte verbinden Sie sich zum WLAN, um nach Computern zu suchen.</string>
     <string name="invalidBroadcast">Bitte verwenden Sie eine gültige Broadcast-Adresse. (z. B. 192.168.0.255)</string>
     <string name="invalidMac">Bitte verwenden Sie eine gültige MAC-Adresse. (z. B. F5:D4:56:12:79:47)</string>
     <string name="computerShouldStart">Der Computer sollte starten!</string>
@@ -60,5 +60,6 @@
     <string name="navigation_drawer_close">Schließe Navigation Drawer</string>
     <string name="navigation_drawer_open">Öffne Navigation Drawer</string>
     <string name="prefs_advanced_scan_cird_dialog_title">Wähle eine CIRD\n(Standardwert 24)</string>
+    <string name="wifiNotConnectedMessageWake">Bitte verbinden Sie sich zum WLAN, um einen Computern zu starten.</string>
 
 </resources>

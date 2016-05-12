@@ -91,7 +91,7 @@ public class ScanFragment extends BaseFragment implements ScanListAdapter.OnClic
                     getFragmentManager().beginTransaction().add(new RetainedScanTaskFragment(), RetainedScanTaskFragment.TAG).commit();
                 } else {
                     final View fragmentContainer = getActivity().findViewById(R.id.fragmentContainer);
-                    Snackbar.make(fragmentContainer, R.string.wifiNotConnectedMessage, Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fragmentContainer, R.string.wifiNotConnectedMessageSearch, Snackbar.LENGTH_LONG).show();
                 }
             }
         });
@@ -133,7 +133,12 @@ public class ScanFragment extends BaseFragment implements ScanListAdapter.OnClic
         switch (position) {
             case 0:
                 ScanResult scanResult = mRecyclerViewAdapter.getItem(mListClickPosition);
-                WakeOnLanPackageSender.sendWakeOnLanPackage(getActivity(), scanResult.mac, scanResult.broadcast);
+                if (NetworkConnectivity.isConnectedToWifi()) {
+                    WakeOnLanPackageSender.sendWakeOnLanPackage(getActivity(), scanResult.mac, scanResult.broadcast);
+                } else {
+                    final View fragmentContainer = getActivity().findViewById(R.id.fragmentContainer);
+                    Snackbar.make(fragmentContainer, R.string.wifiNotConnectedMessageWake, Snackbar.LENGTH_LONG).show();
+                }
                 break;
             case 1:
                 showAddFavoriteDialog();

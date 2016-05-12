@@ -30,7 +30,8 @@
     <string name="helpMessage">If your Computer doesn\'t start, make sure that you have enabled Wake-on-Lan in your computer configuration.</string>
     <string name="failMacDiscover">Failed to discover MAC address</string>
     <string name="error">Error</string>
-    <string name="wifiNotConnectedMessage">Please connect to a wifi network to search for computers.</string>
+    <string name="wifiNotConnectedMessageSearch">Please connect to a wifi network to search for computers.</string>
+    <string name="wifiNotConnectedMessageWake">Please connect to a wifi network to wake up a computer.</string>
 
     <string name="invalidBroadcast">Please use a valid broadcast address. (e.g. 192.168.0.255)</string>
     <string name="invalidMac">Please use a valid MAC address. (e.g. F5:D4:56:12:79:47)</string>

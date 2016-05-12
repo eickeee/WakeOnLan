@@ -1,6 +1,7 @@
 package de.eickemeyer.wake.on.lan.fragments;
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,6 +21,7 @@ import de.eickemeyer.wake.on.lan.fragments.dialogs.FavoritesListAddFavoriteDialo
 import de.eickemeyer.wake.on.lan.fragments.dialogs.FavoritesListClearFavoritesDialogFragment;
 import de.eickemeyer.wake.on.lan.fragments.dialogs.FavoritesListContextDialogFragment;
 import de.eickemeyer.wake.on.lan.fragments.dialogs.OnContextItemClickListener;
+import de.eickemeyer.wake.on.lan.network.NetworkConnectivity;
 import de.eickemeyer.wake.on.lan.network.WakeOnLanPackageSender;
 import de.eickemeyer.wake.on.lan.ui.FabMenu;
 import de.eickemeyer.wake.on.lan.ui.FabMenuListener;
@@ -113,7 +115,12 @@ public class FavoritesFragment extends BaseFragment implements ScanListAdapter.O
 
     public void onContextItemWakeupFavorite() {
         ScanResult scanResult = mRecyclerViewAdapter.getItem(mListClickPosition);
-        WakeOnLanPackageSender.sendWakeOnLanPackage(mActivity, scanResult.mac, scanResult.broadcast);
+        if (NetworkConnectivity.isConnectedToWifi()) {
+            WakeOnLanPackageSender.sendWakeOnLanPackage(mActivity, scanResult.mac, scanResult.broadcast);
+        } else {
+            final View fragmentContainer = getActivity().findViewById(R.id.fragmentContainer);
+            Snackbar.make(fragmentContainer, R.string.wifiNotConnectedMessageWake, Snackbar.LENGTH_LONG).show();
+        }
     }
 
     public ScanListAdapter getRecyclerViewAdapter() {

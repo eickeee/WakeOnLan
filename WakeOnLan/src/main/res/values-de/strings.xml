@@ -61,5 +61,6 @@
     <string name="navigation_drawer_open">Öffne Navigation Drawer</string>
     <string name="prefs_advanced_scan_cird_dialog_title">Wähle eine CIRD\n(Standardwert 24)</string>
     <string name="wifiNotConnectedMessageWake">Bitte verbinden Sie sich zum WLAN, um einen Computern zu starten.</string>
+    <string name="backToExit">Nochmaliges Tippen beendet die App.</string>
 
 </resources>

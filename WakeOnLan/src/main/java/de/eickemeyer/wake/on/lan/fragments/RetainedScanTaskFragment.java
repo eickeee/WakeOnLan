@@ -30,7 +30,7 @@ public class RetainedScanTaskFragment extends Fragment {
 
     public final static String TAG = "TAG_RetainedScanTaskFragment";
     private final static int TIMEOUT = 900;
-    boolean mReady = false;
+    private boolean mReady = false;
     private List<ScanResult> mScanResults;
     private List<String> mIpsToScan;
     private String mOwnIP;

@@ -10,8 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import de.eickemeyer.wake.on.lan.R;
 import de.eickemeyer.wake.on.lan.activities.MainActivity;
 import de.eickemeyer.wake.on.lan.adapter.ScanListAdapter;
@@ -35,13 +36,14 @@ public class FavoritesFragment extends BaseFragment implements ScanListAdapter.O
     private ScanListAdapter mRecyclerViewAdapter;
     private FabMenu mFabMenu;
 
-    @Bind(R.id.recyclerFavorites)
+    @BindView(R.id.recyclerFavorites)
     RecyclerView mRecyclerView;
+    private Unbinder unbinder;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_favorites, container, false);
-        ButterKnife.bind(this, view);
+        unbinder = ButterKnife.bind(this, view);
         mActivity = (MainActivity) getActivity();
 
         setupFavoritesList();
@@ -74,6 +76,12 @@ public class FavoritesFragment extends BaseFragment implements ScanListAdapter.O
         mFabMenu.setVisibility(View.GONE);
         //otherwise the fav fragment leaks
         mFabMenu.setFavoritesFragment(null);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 
     @Override

@@ -3,8 +3,11 @@ package de.eickemeyer.wake.on.lan.activities;
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
@@ -16,8 +19,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.eickemeyer.wake.on.lan.R;
 import de.eickemeyer.wake.on.lan.database.DatabaseManager;
@@ -31,16 +35,26 @@ import de.eickemeyer.wake.on.lan.fragments.WakeFragment;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     public static final String TAG = "WakeOnLan";
 
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @Bind(R.id.nav_view)
+    @BindView(R.id.nav_view)
     NavigationView mNavigationView;
-    @Bind(R.id.appBarLayout)
+    @BindView(R.id.appBarLayout)
     AppBarLayout mAppBarLayout;
 
-    DrawerLayout mDrawerLayout;
+
+    private DrawerLayout mDrawerLayout;
     private String mToolbarTitle;
     private boolean mIsDrawerUnlocked;
+    private boolean doubleBackToExitPressedOnce = false;
+
+    private Handler mHandler = new Handler();
+    private final Runnable mRunnable = new Runnable() {
+        @Override
+        public void run() {
+            doubleBackToExitPressedOnce = false;
+        }
+    };
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -87,12 +101,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onBackPressed() {
-        if (mIsDrawerUnlocked) {
-            if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
-                mDrawerLayout.closeDrawer(GravityCompat.START);
-            }
+        if (mIsDrawerUnlocked && mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
+            mDrawerLayout.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            if (doubleBackToExitPressedOnce) {
+                super.onBackPressed();
+                return;
+            }
+            doubleBackToExitPressedOnce = true;
+            Toast.makeText(this,  R.string.backToExit, Toast.LENGTH_SHORT).show();
+            mHandler.postDelayed(mRunnable, 2000);
         }
     }
 
@@ -100,6 +118,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onDestroy() {
         super.onDestroy();
         DatabaseManager.getInstance().closeDatabase();
+        if (mHandler != null) { mHandler.removeCallbacks(mRunnable); }
     }
 
     @Override

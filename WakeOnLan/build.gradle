@@ -3,7 +3,6 @@ apply plugin: 'realm-android'
 apply plugin: 'com.neenbedankt.android-apt'
 
 android {
-
     compileSdkVersion 23
     buildToolsVersion "24.0.0 rc3"
     dexOptions {
@@ -13,8 +12,8 @@ android {
     defaultConfig {
         minSdkVersion 11
         targetSdkVersion 23
-        versionCode 7
-        versionName "1.6.1"
+        versionCode 8
+        versionName "1.6.2"
     }
     buildTypes {
         release {
@@ -31,24 +30,22 @@ android {
 }
 
 ext {
-    supportLibraryVersion = '23.3.0'
+    supportLibraryVersion = '23.4.0'
     leakcanary = '1.4-beta2'
-    dagger = '2.2'
+    butterknife = '8.0.1'
 }
 
 dependencies {
-    compile "com.android.support:appcompat-v7:$supportLibraryVersion"
     compile "com.android.support:design:$supportLibraryVersion"
     compile "com.android.support:preference-v7:$supportLibraryVersion"
     compile "com.android.support:recyclerview-v7:$supportLibraryVersion"
     compile "com.android.support:cardview-v7:$supportLibraryVersion"
 
     compile 'de.psdev.licensesdialog:licensesdialog:1.8.0'
-    compile 'com.jakewharton:butterknife:7.0.1'
+    compile "com.jakewharton:butterknife:$butterknife"
+    apt "com.jakewharton:butterknife-compiler:$butterknife"
 
     debugCompile "com.squareup.leakcanary:leakcanary-android:$leakcanary"
     releaseCompile "com.squareup.leakcanary:leakcanary-android-no-op:$leakcanary"
     testCompile "com.squareup.leakcanary:leakcanary-android-no-op:$leakcanary"
-
-
 }

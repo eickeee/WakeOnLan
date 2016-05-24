@@ -41,7 +41,7 @@
                     android:imeOptions="actionNext"
                     android:inputType="text"
                     android:nextFocusDown="@+id/inputMac"
-                    android:singleLine="true" />
+                    android:maxLines="1" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -60,7 +60,7 @@
                     android:imeOptions="actionDone"
                     android:inputType="text"
                     android:nextFocusDown="@+id/btn_wakeup"
-                    android:singleLine="true" />
+                    android:maxLines="1" />
 
             </android.support.design.widget.TextInputLayout>
 

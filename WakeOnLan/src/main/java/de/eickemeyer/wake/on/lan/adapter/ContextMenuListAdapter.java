@@ -16,9 +16,9 @@ import de.eickemeyer.wake.on.lan.entities.DialogContextMenuItem;
 
 public class ContextMenuListAdapter extends ArrayAdapter<DialogContextMenuItem> {
 
-    final Context context;
-    final int layoutResourceId;
-    List<DialogContextMenuItem> dialogContextMenuItems = null;
+    private final Context context;
+    private final int layoutResourceId;
+    private List<DialogContextMenuItem> dialogContextMenuItems = null;
 
     public ContextMenuListAdapter(Context context, int layoutResourceId, List<DialogContextMenuItem> dialogContextMenuItems) {
         super(context, layoutResourceId, dialogContextMenuItems);
@@ -52,7 +52,7 @@ public class ContextMenuListAdapter extends ArrayAdapter<DialogContextMenuItem> 
         return row;
     }
 
-    static class ListHolder {
+    private static class ListHolder {
         ImageView imgIcon;
         TextView txtTitle;
     }

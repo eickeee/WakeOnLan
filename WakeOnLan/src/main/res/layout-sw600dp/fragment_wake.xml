@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/linearLayoutWake"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +25,9 @@
             android:id="@+id/linearLayoutTextInputs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/textWakeUp"
             android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <android.support.design.widget.TextInputLayout
@@ -37,12 +39,12 @@
                     android:id="@+id/inputBroadcast"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="15"
+                    android:ems="12"
                     android:hint="@string/broadcast"
                     android:imeOptions="actionNext"
                     android:inputType="text"
-                    android:nextFocusDown="@+id/inputMac"
-                    android:singleLine="true" />
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/inputMac" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -60,12 +62,12 @@
                     android:layout_alignBottom="@+id/inputLayoutBroadcast"
                     android:layout_toEndOf="@+id/inputLayoutBroadcast"
                     android:layout_toRightOf="@+id/inputLayoutBroadcast"
-                    android:ems="15"
+                    android:ems="12"
                     android:hint="@string/mac"
                     android:imeOptions="actionDone"
                     android:inputType="text"
-                    android:nextFocusDown="@+id/btn_wakeup"
-                    android:singleLine="true" />
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/btn_wakeup" />
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
@@ -73,8 +75,9 @@
             android:id="@+id/btn_wakeup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayoutTextInputs"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:text="@string/wake_up" />
 
-    </LinearLayout>
+    </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>

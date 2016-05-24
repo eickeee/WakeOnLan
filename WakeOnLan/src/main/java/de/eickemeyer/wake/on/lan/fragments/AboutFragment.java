@@ -7,9 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 import de.eickemeyer.wake.on.lan.R;
 import de.eickemeyer.wake.on.lan.licences.Licenses;
 import de.psdev.licensesdialog.LicensesDialogFragment;
@@ -18,13 +19,14 @@ import de.psdev.licensesdialog.LicensesDialogFragment;
 public class AboutFragment extends BaseFragment {
 
     public static final String TAG = "TAG_AboutFragment";
-    @Bind(R.id.about_acknowledgement)
+    @BindView(R.id.about_acknowledgement)
     AppCompatTextView ackTextView;
+    private Unbinder unbinder;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_about, container, false);
-        ButterKnife.bind(this, view);
+        unbinder = ButterKnife.bind(this, view);
         return view;
     }
 
@@ -32,6 +34,12 @@ public class AboutFragment extends BaseFragment {
     public void onStart() {
         super.onStart();
         ackTextView.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 
     @OnClick(R.id.btn_licences)

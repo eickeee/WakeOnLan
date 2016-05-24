@@ -24,8 +24,9 @@ import android.widget.ProgressBar;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import de.eickemeyer.wake.on.lan.R;
 import de.eickemeyer.wake.on.lan.adapter.ScanListAdapter;
 import de.eickemeyer.wake.on.lan.entities.ScanResult;
@@ -39,19 +40,20 @@ import de.eickemeyer.wake.on.lan.network.WakeOnLanPackageSender;
 public class ScanFragment extends BaseFragment implements ScanListAdapter.OnClickListener, RetainedScanTaskFragment.ScanTaskListener, OnContextItemClickListener {
 
     public static final String TAG = "TAG_ScanFragment";
-    public static final String KEY_SCAN_RESULTS = "KEY_SCAN_RESULTS";
-    protected ScanListAdapter mRecyclerViewAdapter;
+    private static final String KEY_SCAN_RESULTS = "KEY_SCAN_RESULTS";
+    private ScanListAdapter mRecyclerViewAdapter;
     private int mListClickPosition;
     private ArrayList<ScanResult> mScanResults;
 
-    FloatingActionButton mFloatingActionButton;
-    @Bind(R.id.recyclerScan)
+    private FloatingActionButton mFloatingActionButton;
+    @BindView(R.id.recyclerScan)
     RecyclerView mRecyclerView;
+    private Unbinder unbinder;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_scan, container, false);
-        ButterKnife.bind(this, view);
+        unbinder = ButterKnife.bind(this, view);
         if (savedInstanceState != null)
             mScanResults = savedInstanceState.getParcelableArrayList(KEY_SCAN_RESULTS);
 
@@ -103,6 +105,12 @@ public class ScanFragment extends BaseFragment implements ScanListAdapter.OnClic
         mFloatingActionButton.setVisibility(View.GONE);
         //prevent leak of scan fragment
         mFloatingActionButton.setOnClickListener(null);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 
     @Override

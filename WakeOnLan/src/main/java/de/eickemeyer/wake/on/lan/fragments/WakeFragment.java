@@ -8,9 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 import de.eickemeyer.wake.on.lan.R;
 import de.eickemeyer.wake.on.lan.network.NetworkAddressValidator;
 import de.eickemeyer.wake.on.lan.network.NetworkConnectivity;
@@ -21,16 +22,23 @@ public class WakeFragment extends BaseFragment {
 
     public static final String TAG = "TAG_WakeFragment";
 
-    @Bind(R.id.inputBroadcast)
+    @BindView(R.id.inputBroadcast)
     AppCompatEditText mEditBroadcast;
-    @Bind(R.id.inputMac)
+    @BindView(R.id.inputMac)
     AppCompatEditText mEditMac;
+    private Unbinder unbinder;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_wake, container, false);
-        ButterKnife.bind(this, view);
+        unbinder = ButterKnife.bind(this, view);
         return view;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 
     @OnClick(R.id.btn_wakeup)

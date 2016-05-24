@@ -7,7 +7,8 @@ import com.squareup.leakcanary.RefWatcher;
 import de.eickemeyer.wake.on.lan.WakeOnLanApp;
 import de.eickemeyer.wake.on.lan.activities.MainActivity;
 
-public abstract class BaseFragment extends Fragment {
+abstract class BaseFragment extends Fragment {
+
 
 
     @Override

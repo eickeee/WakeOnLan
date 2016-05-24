@@ -75,6 +75,7 @@
     <string name="prefs_analytics_key" translatable="false">prefs_key_analytics_key</string>
     <string name="prefs_analytics_summary">Allow the app to send diagnose data to Google Analytics.</string>
     <string name="prefs_analytics_title">Google Analytics</string>
+    <string name="backToExit">Please click BACK again to exit</string>
 
 
 </resources>
